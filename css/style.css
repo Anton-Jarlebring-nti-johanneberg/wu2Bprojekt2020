@@ -21,6 +21,14 @@ body{
     grid-template-areas: 
     'as as'
     'tokay dag';
+    grid-template-columns: 1fr 1fr;
+    
+}
+
+.centerDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #agamer{
@@ -30,7 +38,6 @@ body{
 header{
     grid-area: hd;
     text-align: center;
-    position: fixed;
 }
 
 nav{
@@ -43,6 +50,7 @@ nav{
 
 main{
     grid-area: mn;
+    margin: 10px;
 }
 
 aside{
@@ -51,10 +59,13 @@ aside{
 
 .dag{
     grid-area: dag;
-    width: 30vw;
+    width: 32vw;
+    border: 4px solid black;
 }
 
 .tokay{
     grid-area: tokay;
-    width: 30vw;
+    width: 32vw;
+    border: 4px solid black;
+    
 }
