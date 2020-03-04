@@ -17,6 +17,7 @@ body{
 #geckos{
     grid-area: gecko;
     display: grid;
+    margin-bottom: 10px;
 
     grid-template-areas: 
     'as as'
