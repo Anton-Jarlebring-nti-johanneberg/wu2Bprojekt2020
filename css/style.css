@@ -1,17 +1,23 @@
 #main{
     display: grid;
     width: 100vw;
+    height: auto;
     grid-template-columns: 1fr 6fr;
-    grid-template-rows: 1fr 6fr;
+    grid-template-rows: 120vh 200px;
 
     grid-template-areas: 
-    'nav hd'
     'mn mn'
+    'ft ft'
 }
+
+
 
 body{
     margin: 0;
-    background-image: url(../img/rainforest.jpg);
+    background-image: url();
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
 }
 
 #geckos{
@@ -68,12 +74,28 @@ body{
 }
 
 header{
-    grid-area: hd;
+    position: fixed;
     text-align: center;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 100vw;
 }
 
 nav{
-    grid-area: nav;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    z-index: 4;
+}
+
+footer{
+    grid-area: ft;
+    background-color: azure;
+    font-size: 130%;
+    padding: 10px;
 }
 
 .menu{
