@@ -1,4 +1,4 @@
-#container{
+#main{
     display: grid;
     width: 100vw;
     grid-template-columns: 1fr 6fr;
@@ -10,8 +10,8 @@
 }
 
 body{
-    margin: none;
-    background: antiquewhite;
+    margin: 0;
+    background-image: url(../img/rainforest.jpg);
 }
 
 #geckos{
@@ -33,6 +33,8 @@ body{
     position: fixed;
     left: -90vw;
     top: 0;
+    transition: left 0.3s;
+    box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
     z-index: 10;
 }
 
@@ -42,16 +44,17 @@ body{
     left: 0;
     bottom: 0;
     right: 0;
-    background-color:rgba(0, 0, 0, 0,4);
+    background-color:rgba(0, 0, 0, 0.4);
     display: none;
+    z-index: 5;
 }
 
 .show{
-    left: 0;
+    left: 0 !important;
 }
 
-.visible{
-    display: solid;
+.fadeLayer.visible{
+    display: block;
 }
 
 .centerDiv{
@@ -74,7 +77,9 @@ nav{
 }
 
 .menu{
-    width: 14vw;
+    background-color: red;
+    cursor: pointer;
+    display: inline;
 }
 
 main{

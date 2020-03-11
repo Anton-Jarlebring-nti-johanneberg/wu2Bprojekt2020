@@ -1,14 +1,14 @@
 function menu(){
-
-    let menu =document.querySelector('.burgerMenu')
+    
+    let menu =document.querySelector('#burgerMenu')
     menu.classList.toggle('show')
 
-    let fade =document.querySelector('.fade-layer')
+    let fade =document.querySelector('.fadeLayer')
     fade.classList.toggle('visible')
 }
 
-let button = document.querySelector(".menu-button")
+let button = document.querySelector(".menu")
 button.addEventListener("click", menu)
 
-let layer = document.querySelector(".fade-layer")
+let layer = document.querySelector(".fadeLayer")
 layer.addEventListener("click", menu)
