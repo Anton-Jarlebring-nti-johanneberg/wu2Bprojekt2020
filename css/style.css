@@ -2,7 +2,7 @@
     display: grid;
     width: 100vw;
     height: auto;
-    grid-template-rows: 120vh 200px;
+    grid-template-rows: auto 200px;
 
     grid-template-areas: 
     'mn'
@@ -22,7 +22,7 @@ body{
 #geckos{
     grid-area: gecko;
     display: grid;
-    margin-bottom: 10px;
+    margin-bottom: 5vh;
     margin-top: 100px;
 
     grid-template-areas: 
@@ -73,7 +73,6 @@ body{
     grid-area: agam;
     display: grid;
     margin-bottom: 10px;
-    margin-top: 100px;
 
     grid-template-areas: 
     'as as'
@@ -84,6 +83,7 @@ body{
 header{
     background: azure;
     position: fixed;
+    font-size: vh;
     text-align: center;
     top: 0;
     left: 0;
@@ -127,6 +127,10 @@ aside{
     grid-area: as;
 }
 
+h2{
+    font-size: px;
+}
+
 .button{
     width: 80px;
     height: 80px;
@@ -146,10 +150,12 @@ aside{
 
 .vatten{
     grid-area: vatten;
-    width: 50%;
-    height: 50%;
+    width: 32vw;
+    border: black solid 4px;
 }
 
 .dabb{
     grid-area: dabb;
+    width: 32vw;
+    border: black solid 4px;
 }
