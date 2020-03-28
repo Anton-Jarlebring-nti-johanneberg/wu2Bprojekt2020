@@ -28,20 +28,42 @@ body{
     grid-template-areas: 
     'as as'
     'tokay dag';
-    grid-template-columns: 1fr 1fr;
-    
+    grid-template-columns: 1fr 1fr; 
 }
 
 #burgerMenu{
     height: 100vh;
-    width: 40vw;
-    background-color: azure;
+    width: 70vw;
+    background-color: rgb(176, 230, 230);
     position: fixed;
     left: -90vw;
     top: 0;
     transition: left 0.3s;
     box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
     z-index: 10;
+    display: flex;
+    justify-content: center;
+
+}
+
+@media screen and (min-width: 720px){
+    #burgerMenu{
+        height: 100vh;
+        width: 30vw;
+        background-color: rgb(176, 230, 230);
+        position: fixed;
+        left: -90vw;
+        top: 0;
+        transition: left 0.3s;
+        box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+    }
+
+    .navButton a{
+        padding: 30px 7vw !important;
+    }
 }
 
 .fadeLayer{
@@ -158,4 +180,27 @@ h2{
     grid-area: dabb;
     width: 32vw;
     border: black solid 4px;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.navButton{
+    border: 2px solid black;
+    font-size: 200%;
+}
+
+.navButton a{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    background-color: rgb(206, 253, 253);
+    padding: 50px 24vw;
+}
+
+.navButton a:hover{
+    background-color: rgb(185, 226, 226);
 }
