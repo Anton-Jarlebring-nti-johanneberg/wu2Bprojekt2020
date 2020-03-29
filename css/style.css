@@ -9,12 +9,12 @@
     'ft'
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 body{
     margin: 0;
-    background-image: url();
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-attachment: fixed;
     overflow-y: scroll;
     overflow-x: hidden;
 }
@@ -27,68 +27,43 @@ body{
 
     grid-template-areas: 
     'as as'
-    'tokay dag';
+    'cDiv1 cDiv2';
     grid-template-columns: 1fr 1fr; 
-}
-
-#burgerMenu{
-    height: 100vh;
-    width: 70vw;
-    background-color: rgb(176, 230, 230);
-    position: fixed;
-    left: -90vw;
-    top: 0;
-    transition: left 0.3s;
-    box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
-    z-index: 10;
-    display: flex;
-    justify-content: center;
-
-}
-
-@media screen and (min-width: 720px){
-    #burgerMenu{
-        height: 100vh;
-        width: 30vw;
-        background-color: rgb(176, 230, 230);
-        position: fixed;
-        left: -90vw;
-        top: 0;
-        transition: left 0.3s;
-        box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
-        z-index: 10;
-        display: flex;
-        justify-content: center;
-    }
-
-    .navButton a{
-        padding: 30px 7vw !important;
-    }
-}
-
-.fadeLayer{
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color:rgba(0, 0, 0, 0.4);
-    display: none;
-    z-index: 5;
-}
-
-.show{
-    left: 0 !important;
-}
-
-.fadeLayer.visible{
-    display: block;
 }
 
 .centerDiv{
     display: flex;
     align-items: center;
     justify-content: center;
+    grid-area: cDiv;
+}
+
+.centerDiv1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: cDiv1;
+}
+
+.centerDiv2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: cDiv2;
+}
+
+.centerDiv3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: cDiv3;
+}
+
+.centerDiv4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: cDiv4;
 }
 
 #agamer{
@@ -98,14 +73,13 @@ body{
 
     grid-template-areas: 
     'as as'
-    'dabb vatten';
+    'cDiv3 cDiv4';
     grid-template-columns: 1fr 1fr;
 }
 
 header{
     background: azure;
     position: fixed;
-    font-size: vh;
     text-align: center;
     top: 0;
     left: 0;
@@ -121,6 +95,10 @@ nav{
     width: 80px;
     height: 80px;
     z-index: 4;
+}
+
+div{
+    grid-area: div;
 }
 
 footer{
@@ -149,10 +127,6 @@ aside{
     grid-area: as;
 }
 
-h2{
-    font-size: px;
-}
-
 .button{
     width: 80px;
     height: 80px;
@@ -177,9 +151,43 @@ h2{
 }
 
 .dabb{
-    grid-area: dabb;
     width: 32vw;
     border: black solid 4px;
+}
+
+    /*Burger menu*/
+#burgerMenu{
+    height: 100vh;
+    width: 70vw;
+    background-color: rgb(176, 230, 230);
+    position: fixed;
+    left: -90vw;
+    top: 0;
+    transition: left 0.3s;
+    box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+
+}
+
+.fadeLayer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color:rgba(0, 0, 0, 0.4);
+    display: none;
+    z-index: 5;
+}
+
+.show{
+    left: 0 !important;
+}
+
+.fadeLayer.visible{
+    display: block;
 }
 
 ul{
@@ -198,9 +206,119 @@ ul{
     text-decoration: none;
     color: black;
     background-color: rgb(206, 253, 253);
-    padding: 50px 24vw;
+    padding: 20px 16vw;
 }
 
 .navButton a:hover{
     background-color: rgb(185, 226, 226);
+}
+
+    /*Dagggecko*/
+#daggecko{
+    display: grid;
+    grid-template-areas: 
+    'cDiv'
+    'art1'
+    'art2'
+    'ft';
+    margin-top: 100px;
+}
+
+.daggeckoIMG{
+    width: 70vw;
+    border: 4px solid black;
+}
+
+article{
+    margin: 0 20px;
+}
+
+.art1{
+    grid-area: art1;
+    text-align: center;
+}
+
+.art2{
+    grid-area: art2;
+    text-align: center;
+}
+
+    /*Tokay*/
+#tokay{
+    display: grid;
+    grid-template-areas: 
+    'cDiv'
+    'art1'
+    'art2'
+    'ft';
+    margin-top: 100px;
+}
+    /*Dabbagam*/
+#dabbagam{
+    display: grid;
+    grid-template-areas: 
+    'cDiv'
+    'art1'
+    'art2'
+    'ft';
+    margin-top: 100px;
+}
+    /*Vattenagam*/
+#vattenagam{
+    display: grid;
+    grid-template-areas: 
+    'cDiv'
+    'art1'
+    'art2'
+    'art3'
+    'art4'
+    'ft';
+    margin-top: 100px;
+}
+
+.art3{
+    grid-area: art3;
+    text-align: center;
+}
+
+.art4{
+    grid-area: art4;
+    text-align: center;
+}
+
+    /*Desktop*/
+@media screen and (min-width: 720px) {
+    #burgerMenu{
+        width: 30vw;
+    }
+    
+    .navButton a{
+        padding: 20px 7vw;
+    }
+    
+    .daggeckoIMG{
+        width: 510px;
+    }
+    
+}
+    
+@media screen and (min-width: 1080px) {
+    #daggecko, #tokay, #dabbagam{
+        grid-template-areas: 
+        'cDiv cDiv'
+        'art1 art2'
+        'ft ft';
+    }
+
+    #vattenagam{
+        grid-template-areas: 
+        'cDiv cDiv'
+        'art1 art2'
+        'art3 art4'
+        'ft ft';
+    }
+
+    .art1, .art2, .art3, .art4{
+        text-align: left;
+    }
 }
